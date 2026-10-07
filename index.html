@@ -234,7 +234,7 @@
         ['MIX 3', '고민은 하루만! 마음이 끌리는 쪽을 믿어 보세요']
       ],
       dose: '하루 한 번, 따뜻한 차와 함께 덧칠하기',
-      lang: { flag: '🇯🇵', name: '일본어', line: '紅葉がとてもきれいですね。', read: '코-요-가 토테모 키레-데스네', ko: '단풍이 정말 예쁘네요.' }
+      lang: { flag: '🇯🇵', name: '일본어', line: '紅葉がとてもきれいですね。', read: '', ko: '단풍이 정말 예쁘네요.' }
     },
     mustard: {
       key: 'mustard', emoji: '🌻', color: '#D4A23A', soft: '#FBF1D9', name: '머스터드',
@@ -255,7 +255,7 @@
         ['MIX 3', '오늘 잘한 일 3가지를 스스로 칭찬하기']
       ],
       dose: '바쁜 날일수록 두 겹으로 덧칠하기',
-      lang: { flag: '🇬🇧', name: '영어', line: 'Could you recommend a cozy café nearby?', read: '쿠쥬 레커멘드 어 코지 카페 니어바이?', ko: '근처에 아늑한 카페 추천해 주실 수 있나요?' }
+      lang: { flag: '🇬🇧', name: '영어', line: 'Could you recommend a cozy café nearby?', read: '', ko: '근처에 아늑한 카페 추천해 주실 수 있나요?' }
     },
     olive: {
       key: 'olive', emoji: '🍵', color: '#6E7F45', soft: '#ECF0E1', name: '올리브 그린',
@@ -276,7 +276,7 @@
         ['MIX 3', '좋아하는 사람에게 먼저 안부 문자 보내기']
       ],
       dose: '마음이 복잡할 때마다 수시로 덧칠하기',
-      lang: { flag: '🇨🇳', name: '중국어', line: '这里的风景真美！', read: '쩌리 더 펑징 쩐 메이!', ko: '여기 풍경 정말 아름다워요!' }
+      lang: { flag: '🇨🇳', name: '중국어', line: '这里的风景真美！', read: '', ko: '여기 풍경 정말 아름다워요!' }
     },
     terracotta: {
       key: 'terracotta', emoji: '🧡', color: '#C8643B', soft: '#F9E5DB', name: '테라코타',
@@ -297,7 +297,7 @@
         ['MIX 3', '여행지에서 현지어로 먼저 말 걸어 보기']
       ],
       dose: '심심할 때마다 바로 덧칠하기',
-      lang: { flag: '🇪🇸', name: '스페인어', line: '¡Qué bonito atardecer!', read: '께 보니또 아따르데세르!', ko: '노을이 정말 예쁘네요!' }
+      lang: { flag: '🇪🇸', name: '스페인어', line: '¡Qué bonito atardecer!', read: '', ko: '노을이 정말 예쁘네요!' }
     }
   };
   var ORDER = ['burgundy', 'mustard', 'olive', 'terracotta'];
@@ -454,7 +454,7 @@
       '<div class="rounded-2xl p-5" style="background:' + t.soft + '">' +
         '<p class="text-[12px] font-bold tracking-wider text-sub">여행지에서 써먹는 ' + t.lang.name + ' 한마디 ' + t.lang.flag + '</p>' +
         '<p class="mt-2 text-[21px] font-black leading-snug break-words" style="color:' + t.color + '">' + escapeHtml(t.lang.line) + '</p>' +
-        '<p class="mt-1 text-[13px] text-sub">[' + escapeHtml(t.lang.read) + ']</p>' +
+        (t.lang.read ? '<p class="mt-1 text-[13px] text-sub">[' + escapeHtml(t.lang.read) + ']</p>' : '') +
         '<p class="mt-2 text-[15px] font-medium">“' + escapeHtml(t.lang.ko) + '”</p>' +
       '</div>' +
 
